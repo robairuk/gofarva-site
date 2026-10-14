@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Health Connect privacy — Go Farva</title>
+  <meta name="description" content="How Go Farva uses Android Health Connect: optional, write-only, nothing is read.">
+  <meta name="theme-color" content="#0B6B66">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://gofarva.run/privacy/health-connect/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap inner">
+      <a class="logo" href="/" aria-label="Go Farva home">
+        <img class="logo-full" src="/assets/brand/gofarva-horizontal-colour.svg" alt="Go Farva" width="168" height="36">
+        <img class="logo-mark" src="/assets/brand/gofarva-mark-colour.svg" alt="" width="36" height="36">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="/privacy/">Privacy</a>
+        <a href="/support/">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="wrap page-hero">
+      <h1>Health Connect privacy</h1>
+      <p>Optional write-only integration for Go Farva on Android.</p>
+    </div>
+    <div class="wrap">
+      <article class="prose">
+        <p>Go Farva can optionally write finished runs to <strong>Android Health Connect</strong> so other apps you choose can see them.</p>
+        <ul>
+          <li><strong>Write-only.</strong> The app does not read exercise sessions, heart rate, steps, or any other Health Connect data.</li>
+          <li><strong>Opt-in.</strong> Nothing is written until you enable Health Connect in Settings and grant permission in the system UI.</li>
+          <li><strong>You control it.</strong> You can turn the setting off or revoke Health Connect permissions in Android settings at any time.</li>
+          <li><strong>On-device.</strong> Fez Commerce does not receive Health Connect data from this feature.</li>
+        </ul>
+        <p>Full privacy details for the app: <a href="/privacy/">Privacy policy</a>. Questions: <a href="mailto:robert@fezcommerce.co.uk">robert@fezcommerce.co.uk</a>.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <a class="footer-logo" href="/" aria-label="Go Farva home">
+          <img src="/assets/brand/gofarva-horizontal-white-yellow.svg" alt="Go Farva" width="150" height="32">
+        </a>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="/privacy/">Privacy</a>
+          <a href="/support/">Support</a>
+          <a href="/privacy/health-connect/">Health Connect privacy</a>
+        </nav>
+      </div>
+      <div class="footer-meta">
+        <span>© 2026 Fez Commerce · Sunderland, UK</span>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/site.js" defer></script>
+</body>
+</html>
