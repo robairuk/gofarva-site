@@ -476,3 +476,48 @@ section { padding: 3.5rem 0; }
 @media (min-width: 701px) {
   .logo .logo-mark { display: none; }
 }
+
+
+/* Phone captions in screens section */
+.phone-row {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.phone-fig {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+  width: min(168px, 42%);
+}
+.phone-fig .phone {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 3px solid #1a2422;
+  background: #000;
+}
+.phone-fig figcaption {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--on-surface-variant);
+  text-align: center;
+  line-height: 1.3;
+  max-width: 14ch;
+}
+@media (min-width: 961px) {
+  .screens-grid {
+    grid-template-columns: 0.85fr 1.35fr;
+  }
+  .phone-fig { width: min(150px, 22%); }
+}
+@media (max-width: 700px) {
+  .phone-fig { width: min(150px, 44%); }
+}
