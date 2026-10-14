@@ -11,7 +11,7 @@ The Android app lives in a separate **private** repo (`robairuk/go-farva`). Do n
 | Path | Purpose |
 |------|---------|
 | `/` | Landing |
-| `/privacy/` | Privacy policy (placeholder body until QA finalises) |
+| `/privacy/` | Privacy policy (QA draft — pending founder review) |
 | `/support/` | Support / contact |
 | `/privacy/health-connect/` | Health Connect write-only note |
 
@@ -85,6 +85,10 @@ Then set the Pages custom domain to `www.gofarva.run`.
 **Do not** point DNS at the private app repo. Only this public `gofarva-site` repo serves Pages.
 
 After DNS propagates (often minutes, sometimes up to 48 hours), tick **Enforce HTTPS** in the Pages settings.
+
+## Privacy copy
+
+`/privacy/` and `/privacy/health-connect/` use the QA drafts from 14 Oct 2026. Each page shows a **Draft, pending founder review** note until the founder OKs the text for Play.
 
 ## Brand
 

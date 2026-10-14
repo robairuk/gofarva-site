@@ -6,6 +6,7 @@
   <title>Health Connect privacy — Go Farva</title>
   <meta name="description" content="How Go Farva uses Android Health Connect: optional, write-only, nothing is read.">
   <meta name="theme-color" content="#0B6B66">
+  <meta name="robots" content="noindex">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://gofarva.run/privacy/health-connect/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,8 +24,9 @@
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="nav" aria-label="Primary">
-        <a href="/privacy/">Privacy</a>
+        <a href="/#features">Features</a>
         <a href="/support/">Support</a>
+        <a href="/privacy/">Privacy</a>
       </nav>
     </div>
   </header>
@@ -36,14 +38,38 @@
     </div>
     <div class="wrap">
       <article class="prose">
-        <p>Go Farva can optionally write finished runs to <strong>Android Health Connect</strong> so other apps you choose can see them.</p>
+        <p class="note"><strong>Draft, pending founder review.</strong> This text is from QA (14 Oct 2026). It is not final until you OK it for Play and the live site.</p>
+
+        <p><strong>App:</strong> Go Farva (<code>uk.co.fezcommerce.gofarva</code>) · Fez Commerce, Sunderland, UK<br>
+        <strong>Contact:</strong> <a href="mailto:robert@fezcommerce.co.uk">robert@fezcommerce.co.uk</a> (until support@gofarva.run)<br>
+        <strong>Full privacy policy:</strong> <a href="/privacy/">gofarva.run/privacy</a></p>
+
+        <h2>What we write (optional, off by default)</h2>
+        <p>If you turn on <strong>Send runs to Health Connect</strong> in Settings, Go Farva may write to Health Connect on this phone, for each finished run you recorded here:</p>
         <ul>
-          <li><strong>Write-only.</strong> The app does not read exercise sessions, heart rate, steps, or any other Health Connect data.</li>
-          <li><strong>Opt-in.</strong> Nothing is written until you enable Health Connect in Settings and grant permission in the system UI.</li>
-          <li><strong>You control it.</strong> You can turn the setting off or revoke Health Connect permissions in Android settings at any time.</li>
-          <li><strong>On-device.</strong> Fez Commerce does not receive Health Connect data from this feature.</li>
+          <li>an <strong>exercise session</strong> (type: running), with start and end time and title;</li>
+          <li>the <strong>route</strong> (GPS points), if you allow it;</li>
+          <li>the <strong>distance</strong>.</li>
         </ul>
-        <p>Full privacy details for the app: <a href="/privacy/">Privacy policy</a>. Questions: <a href="mailto:robert@fezcommerce.co.uk">robert@fezcommerce.co.uk</a>.</p>
+
+        <h2>What we never do</h2>
+        <ul>
+          <li>We <strong>do not read</strong> Health Connect data.</li>
+          <li>We do <strong>not</strong> send imported Strava runs to Health Connect.</li>
+          <li>We do <strong>not</strong> upload Health Connect data to any server of ours.</li>
+          <li>We do <strong>not</strong> sync runs to Strava or Garmin through Health Connect (they do not receive runs that way).</li>
+        </ul>
+
+        <h2>Your controls</h2>
+        <ul>
+          <li>Turn the setting off in Go Farva → Settings.</li>
+          <li>Revoke access in the Health Connect app.</li>
+          <li>Manage or delete past entries in Health Connect itself.</li>
+        </ul>
+
+        <h2>Why we ask</h2>
+        <p>So other fitness apps <strong>you</strong> choose can see the runs you recorded in Go Farva, if you allow them in Health Connect.</p>
+
       </article>
     </div>
   </main>
@@ -62,6 +88,7 @@
       </div>
       <div class="footer-meta">
         <span>© 2026 Fez Commerce · Sunderland, UK</span>
+        <span>Map data © OpenStreetMap contributors · tiles OpenFreeMap when online</span>
       </div>
     </div>
   </footer>

@@ -6,6 +6,7 @@
   <title>Privacy policy — Go Farva</title>
   <meta name="description" content="Privacy policy for Go Farva, the offline Android run tracker by Fez Commerce.">
   <meta name="theme-color" content="#0B6B66">
+  <meta name="robots" content="noindex">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://gofarva.run/privacy/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,43 +34,84 @@
   <main id="main">
     <div class="wrap page-hero">
       <h1>Privacy policy</h1>
-      <p>Last updated: 14 October 2026 · Package <code>uk.co.fezcommerce.gofarva</code></p>
+      <p>Package <code>uk.co.fezcommerce.gofarva</code> · Fez Commerce, Sunderland, UK</p>
     </div>
     <div class="wrap">
       <article class="prose">
-        <p class="note"><strong>Placeholder.</strong> This page sets out the intended structure and facts. Final legal wording from QA will replace the body text before Play launch. Contact details and product behaviour below are accurate.</p>
+        <p class="note"><strong>Draft, pending founder review.</strong> This text is from QA (14 Oct 2026). It is not final until you OK it for Play and the live site.</p>
 
-        <h2>Who we are</h2>
-        <p>Go Farva is made by Fez Commerce, a sole trader based in Sunderland, United Kingdom. Contact: <a href="mailto:robert@fezcommerce.co.uk">robert@fezcommerce.co.uk</a>.</p>
+        <p><strong>Last updated:</strong> draft · Package <code>uk.co.fezcommerce.gofarva</code><br>
+        <strong>Contact:</strong> <a href="mailto:robert@fezcommerce.co.uk">robert@fezcommerce.co.uk</a> (until support@gofarva.run is live)</p>
 
-        <h2>What the app stores on your device</h2>
-        <p>Runs, GPS points, settings, routes you create, and optional audio or plan preferences are stored locally on your phone (Room database and app files). We do not operate Go Farva accounts or our own servers that store your runs.</p>
+        <p>Go Farva is a running app for Android. It is made by Fez Commerce, a one-person business in Sunderland, UK. This policy explains what the app does with your data.</p>
 
-        <h2>Location</h2>
-        <p>While you are recording a run, the app uses precise location (GPS) in the foreground, and may use a foreground location service so tracking continues when the screen is off. Location is written into the run on your device. We do not upload your location to Fez Commerce.</p>
-
-        <h2>Maps (OpenFreeMap / IP)</h2>
-        <p>When you view a map online, map tiles are fetched from OpenFreeMap (OpenStreetMap data). That request typically includes your IP address and the map area you are viewing. Attribution: © OpenStreetMap contributors · OpenFreeMap. Offline map display may show a route-only fallback without tiles.</p>
-
-        <h2>Pro / Play Billing</h2>
-        <p>Pro is a one-off unlock (£4.99) sold through Google Play Billing. Purchase and entitlement are handled by Google. Fez Commerce does not receive your full payment card details. Google may process purchase data under its own policies.</p>
-
-        <h2>Sharing</h2>
+        <h2>Short version</h2>
         <ul>
-          <li><strong>GPX and Garmin FIT:</strong> You can export a route or run file and share it yourself via the Android share sheet. There is no automatic sync to Garmin Connect or Strava.</li>
-          <li><strong>Health Connect:</strong> Optional and write-only. If you enable it, finished runs can be written to Health Connect. The app does not read Health Connect data. See also the <a href="/privacy/health-connect/">Health Connect privacy note</a>.</li>
-          <li><strong>Strava ZIP import:</strong> You can import a Strava export ZIP you choose. Import runs on your device; we do not connect to Strava’s API for sync.</li>
-          <li><strong>Share cards:</strong> Images you generate for social media stay on your device until you share them.</li>
+          <li>There is <strong>no account</strong> and <strong>no ads</strong>.</li>
+          <li>Your runs stay <strong>on your phone</strong>. We do not run a server that stores them.</li>
+          <li>Location is used <strong>only while you are recording a run</strong>.</li>
+          <li>Map tiles (when online) are fetched from OpenFreeMap; those requests show your IP address and the map area you are looking at.</li>
+          <li>Purchases go through <strong>Google Play</strong>.</li>
+          <li>Optional: you can send finished runs to <strong>Health Connect</strong> on this phone (write only).</li>
+          <li>Contact us at the email above.</li>
         </ul>
 
-        <h2>No account / no own run servers</h2>
-        <p>There is no Go Farva sign-up. We do not host a cloud copy of your run history. Uninstalling the app removes local data unless you have exported it.</p>
+        <h2>What stays on your phone</h2>
+        <p>When you record a run, Go Farva stores on the device: GPS points, times, distance, pace, splits, and (if you use Pro) personal bests, totals and plans. Settings and Pro unlock status are also stored locally.</p>
+        <p><strong>Deleting a run</strong> in the app removes it. <strong>Uninstalling</strong> the app removes the remaining data. There is no account to delete with us.</p>
 
-        <h2>Contact</h2>
-        <p>Questions about privacy: <a href="mailto:robert@fezcommerce.co.uk">robert@fezcommerce.co.uk</a>.</p>
+        <h2>Location</h2>
+        <p>Precise location is used <strong>only while a run is recording</strong>, in a foreground service that <strong>you</strong> start by tapping Start. We do <strong>not</strong> use background location. Location is stored on the device as part of the run. It leaves the phone only if <strong>you</strong> export or share a run (for example a GPX file), or if you turn on Health Connect (see below).</p>
+
+        <h2>Maps (OpenFreeMap / OpenStreetMap)</h2>
+        <p>When a map is on screen and you are online, the app requests map tiles, fonts and style files from <strong>OpenFreeMap</strong> (tiles.openfreemap.org; operated by Hyperknot Software Kft., Hungary; may be served via Cloudflare). Those requests reveal:</p>
+        <ul>
+          <li>your device’s <strong>IP address</strong>, and</li>
+          <li>the <strong>map area</strong> you are looking at (roughly where you or the run is).</li>
+        </ul>
+        <p>No account, cookie or run file is sent with those requests. Map data is from OpenStreetMap. Attribution in the app: © OpenStreetMap · OpenFreeMap (OpenMapTiles).</p>
+
+        <h2>Sharing you choose</h2>
+        <ul>
+          <li><strong>GPX export / share:</strong> you choose who receives the file (for example email, Files, or uploading at strava.com yourself). We never upload to Strava or Garmin for you.</li>
+          <li><strong>Strava ZIP import (Pro):</strong> you pick a Strava “download your data” ZIP on the phone. It is read in place; nothing is copied to our servers and no Strava API is used.</li>
+          <li><strong>Health Connect (optional):</strong> if you turn it on in Settings, finished runs you record can be written to Health Connect on this phone. See the Health Connect section below (or <a href="/privacy/health-connect/">Health Connect privacy</a>).</li>
+        </ul>
+
+        <h2>Purchases</h2>
+        <p>Pro is a one-time unlock through <strong>Google Play Billing</strong>. Google handles the payment. The app only checks and stores whether Pro is unlocked on this device. We never see your card details.</p>
+
+        <h2>Backups</h2>
+        <p>Runs are <strong>not</strong> included in Google’s cloud backup for the app (so a large history cannot break the backup quota, and “runs stay on this phone” stays true). When you set up a <strong>new phone</strong> and use Android’s device-to-device transfer, your runs <strong>may</strong> copy across. Pro unlock comes back from Google Play on the new phone. Your own GPX / “export all” is the backup we recommend.</p>
+
+        <h2>Crash reports</h2>
+        <p>We do not use a third-party analytics or crash SDK. Google Play may show us crash and ANR reports in Play Console as part of distributing the app.</p>
+
+        <h2>Text-to-speech</h2>
+        <p>Audio cues use the phone’s own text-to-speech engine.</p>
+
+        <h2>Children</h2>
+        <p>Go Farva is aimed at adults (18+). It is not directed at children.</p>
 
         <h2>Changes</h2>
-        <p>We may update this policy. The “Last updated” date at the top will change when we do. Material changes will be reflected in the app listing / in-app link where required.</p>
+        <p>If this policy changes in a meaningful way, we will update this page and the “Last updated” date.</p>
+
+        <h2>Contact</h2>
+        <p>Privacy questions: <a href="mailto:robert@fezcommerce.co.uk"><strong>robert@fezcommerce.co.uk</strong></a> (or support@gofarva.run once live).<br>
+        Fez Commerce, Sunderland, United Kingdom.</p>
+
+        <h2>Health Connect (optional)</h2>
+        <p>This section is also published separately at <a href="/privacy/health-connect/">/privacy/health-connect/</a> for Health Connect’s privacy link.</p>
+        <p>If you turn on <strong>Send runs to Health Connect</strong> in Settings (off by default):</p>
+        <ul>
+          <li>Go Farva may <strong>write</strong> to Health Connect on this phone: an exercise session (running), the route, and the distance for each finished run you recorded here.</li>
+          <li>We <strong>do not read</strong> anything from Health Connect.</li>
+          <li>Imported Strava runs are <strong>not</strong> sent.</li>
+          <li>Data stays on the device inside Health Connect. Other apps only see it if <strong>you</strong> grant them access in Health Connect.</li>
+          <li>Turn the setting off anytime. You can also remove access in the Health Connect app. Past writes already in Health Connect are managed there.</li>
+        </ul>
+        <p>This does <strong>not</strong> send runs to Strava or Garmin. To get a run into Strava or Garmin, export a GPX and upload it yourself.</p>
+
       </article>
     </div>
   </main>
