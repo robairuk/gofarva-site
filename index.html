@@ -29,6 +29,7 @@
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="#notify">Notify me</a>
         <a href="#features">Features</a>
         <a href="#screens">Screens</a>
         <a href="#faq">FAQ</a>
@@ -58,6 +59,35 @@
           <div class="phone">
             <img src="/assets/screens/live-run.png" alt="" width="390" height="866" loading="eager">
           </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="notify" class="newsletter alt">
+      <div class="wrap">
+        <div class="newsletter-card">
+          <h2>Get notified at launch</h2>
+          <p class="section-sub">Leave your email and we’ll tell you when Go Farva is on Google Play. No spam, unsubscribe any time.</p>
+          <form id="launch-notify" class="newsletter-form" action="/api/subscribe" method="post" novalidate>
+            <div>
+              <label class="field-label" for="notify-email">Email</label>
+              <input id="notify-email" name="email" type="email" autocomplete="email" required maxlength="254" placeholder="you@example.com">
+            </div>
+            <div class="hp" aria-hidden="true">
+              <label for="notify-website">Website</label>
+              <input id="notify-website" name="website" type="text" tabindex="-1" autocomplete="off">
+            </div>
+            <label class="consent">
+              <input id="notify-consent" name="consent" type="checkbox" value="true" required>
+              <span>I agree to Fez Commerce emailing me when Go Farva launches. Unsubscribe any time. See our <a href="/privacy/">privacy policy</a>.</span>
+            </label>
+            <button class="btn-submit" type="submit">Notify me</button>
+            <p id="notify-msg" class="newsletter-msg" role="status" aria-live="polite"></p>
+          </form>
+          <noscript>
+            <p class="newsletter-noscript">JavaScript is needed to sign up here. Email <a href="mailto:robert@fezcommerce.co.uk">robert@fezcommerce.co.uk</a> if you’d like to be notified at launch.</p>
+          </noscript>
         </div>
       </div>
     </section>
