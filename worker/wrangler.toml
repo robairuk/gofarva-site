@@ -1,0 +1,21 @@
+name = "gofarva-newsletter"
+main = "src/index.js"
+compatibility_date = "2024-10-01"
+account_id = "c26e84892ea99e13696c6ce64c4583b8"
+
+# Requires the apex A records for gofarva.run to be Proxied (orange cloud)
+# so Cloudflare can intercept /api/* before GitHub Pages. Today the apex is
+# DNS-only; see README for the api.gofarva.run fallback.
+routes = [
+  { pattern = "gofarva.run/api/*", zone_name = "gofarva.run" }
+]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "gofarva-newsletter"
+# Replace after: wrangler d1 create gofarva-newsletter
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+[vars]
+ALLOWED_ORIGIN = "https://gofarva.run"
+CONSENT_TEXT_VERSION_DEFAULT = "launch-notify-v1"
