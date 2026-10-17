@@ -231,7 +231,7 @@ section { padding: 3.5rem 0; }
 /* Feature cards */
 .features {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
 .feature {
@@ -542,7 +542,7 @@ section { padding: 3.5rem 0; }
 
 /* Responsive */
 @media (max-width: 960px) {
-  .features { grid-template-columns: repeat(3, 1fr); }
+  .features { grid-template-columns: repeat(2, 1fr); }
   .hero-grid,
   .screens-grid,
   .share-block { grid-template-columns: 1fr; }
