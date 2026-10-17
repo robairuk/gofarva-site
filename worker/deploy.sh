@@ -53,8 +53,7 @@ npx wrangler deploy
 
 echo
 echo "Done. Confirm:"
-echo "  1) Apex gofarva.run A records are Proxied (orange cloud), OR"
-echo "     add a proxied api.gofarva.run CNAME to the workers.dev target and"
-echo "     point the site form ENDPOINT at https://api.gofarva.run/subscribe"
-echo "  2) POST https://gofarva.run/api/subscribe returns {ok:true}"
+echo "  1) Custom domain api.gofarva.run is attached (DNS/cert via Workers)"
+echo "  2) POST https://api.gofarva.run/subscribe returns {ok:true}"
+echo "  3) Site form ENDPOINT is https://api.gofarva.run/subscribe"
 echo "Export list later with: ./export.sh"

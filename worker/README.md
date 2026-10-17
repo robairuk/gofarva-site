@@ -6,19 +6,11 @@ Cloudflare Worker + D1 store for the homepage “Get notified at launch” form.
 - **Store:** private D1 database `gofarva-newsletter`.
 - **Export:** `./export.sh` on the box (needs API token) → `/workspace/dev/newsletter-subscribers-<date>.csv`.
 
-## DNS requirement
+## DNS / routing
 
-`gofarva.run` nameservers are Cloudflare, but the **apex A records are DNS-only** (grey cloud) and point at GitHub Pages. Responses currently come from `server: GitHub.com` with no `cf-ray`, so a Worker route on `gofarva.run/api/*` will **not** run until those A records are set to **Proxied** (orange cloud).
+Live endpoint: **https://api.gofarva.run/subscribe** (Workers Custom Domain).
 
-`data.gofarva.run` is already proxied.
-
-### Preferred fix
-In Cloudflare DNS for `gofarva.run`, set the four GitHub Pages A records to **Proxied**. Keep the same IP values. Then `gofarva.run/api/*` is handled by this Worker and everything else still reaches GitHub Pages.
-
-### Fallback
-1. Add proxied subdomain `api` → Workers route / custom domain `api.gofarva.run`.
-2. In `js/site.js`, set `ENDPOINT` to `https://api.gofarva.run/subscribe`.
-3. Keep `ALLOWED_ORIGIN=https://gofarva.run`.
+The apex `gofarva.run` stays on GitHub Pages (DNS-only A records). Do not orange-cloud the apex for this feature. CORS allows `https://gofarva.run` and `https://www.gofarva.run`.
 
 ## Stored fields (for privacy copy)
 

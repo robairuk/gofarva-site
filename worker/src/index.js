@@ -8,15 +8,20 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const MAX_EMAIL_LEN = 254;
 const RATE_LIMIT_MAX = 5;
 
-function corsHeaders(origin, allowed) {
+function allowedOrigins(env) {
+  const raw = env.ALLOWED_ORIGINS || env.ALLOWED_ORIGIN || "https://gofarva.run";
+  return raw.split(",").map((s) => s.trim()).filter(Boolean);
+}
+
+function corsHeaders(origin, allowedList) {
   const headers = {
     "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type, Accept",
     "Access-Control-Max-Age": "86400",
     Vary: "Origin",
   };
-  if (origin === allowed) {
-    headers["Access-Control-Allow-Origin"] = allowed;
+  if (origin && allowedList.includes(origin)) {
+    headers["Access-Control-Allow-Origin"] = origin;
   }
   return headers;
 }
@@ -59,12 +64,12 @@ function utcHourWindow(now = new Date()) {
 }
 
 export async function handleSubscribe(request, env, opts = {}) {
-  const allowed = env.ALLOWED_ORIGIN || "https://gofarva.run";
+  const allowedList = allowedOrigins(env);
   const origin = request.headers.get("Origin") || "";
-  const cors = corsHeaders(origin, allowed);
+  const cors = corsHeaders(origin, allowedList);
 
   if (request.method === "OPTIONS") {
-    if (origin && origin !== allowed) {
+    if (origin && !allowedList.includes(origin)) {
       return new Response(null, { status: 403, headers: cors });
     }
     return new Response(null, { status: 204, headers: cors });
@@ -74,7 +79,7 @@ export async function handleSubscribe(request, env, opts = {}) {
     return json({ ok: false, error: "Method not allowed." }, 405, cors);
   }
 
-  if (origin && origin !== allowed) {
+  if (origin && !allowedList.includes(origin)) {
     return json({ ok: false, error: "Origin not allowed." }, 403, cors);
   }
 

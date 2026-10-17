@@ -19,9 +19,8 @@
   if (!form) return;
   var msg = document.getElementById("notify-msg");
   var btn = form.querySelector(".btn-submit");
-  // Same-origin /api/subscribe once the apex is Cloudflare-proxied.
-  // Fallback (DNS-only apex): set to "https://api.gofarva.run/subscribe".
-  var ENDPOINT = "/api/subscribe";
+  // Worker custom domain (apex stays on GitHub Pages, DNS-only).
+  var ENDPOINT = "https://api.gofarva.run/subscribe";
   var CONSENT_VERSION = "launch-notify-v1";
 
   form.addEventListener("submit", function (e) {

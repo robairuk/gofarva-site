@@ -55,7 +55,7 @@ function env() {
   return {
     DB: memoryDb(),
     SALT: "test-salt",
-    ALLOWED_ORIGIN: "https://gofarva.run",
+    ALLOWED_ORIGINS: "https://gofarva.run,https://www.gofarva.run",
     CONSENT_TEXT_VERSION_DEFAULT: "launch-notify-v1",
   };
 }
@@ -167,4 +167,15 @@ describe("handleSubscribe", () => {
     expect(e.DB._subscribers.size).toBe(1);
     expect(e.DB._subscribers.get("same@example.com").source).toBe("b");
   });
+
+  it("allows www origin", async () => {
+    const res = await handleSubscribe(
+      req({ email: "www@example.com", consent: true }, { Origin: "https://www.gofarva.run" }),
+      e,
+      { ip: "4.4.4.4" }
+    );
+    expect(res.status).toBe(200);
+  });
 });
+
+
