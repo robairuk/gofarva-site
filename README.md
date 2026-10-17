@@ -97,3 +97,8 @@ Colours and logos come from the Go Farva design tokens (`#0B6B66` teal, `#F0CB4C
 ## Licence
 
 Site content © Fez Commerce. Inter font via Google Fonts (SIL OFL).
+
+## Launch newsletter (branch `newsletter-signup`)
+
+Homepage form posts to `/api/subscribe`. The Cloudflare Worker + D1 schema live in [`worker/`](./worker/). Deploy with `worker/deploy.sh` after a Cloudflare API token is provided; do not merge this branch until DNS for the apex is Proxied (or the form is pointed at `api.gofarva.run`). Export subscribers with `worker/export.sh`.
+
