@@ -141,6 +141,12 @@ export async function handleSubscribe(request, env, opts = {}) {
     .bind(bucketKey, windowStart)
     .first();
 
+  // Keep IP hashes no longer than 24 hours.
+  const nowMs = opts.now ? new Date(opts.now).getTime() : Date.now();
+  await env.DB.prepare("DELETE FROM rate_limits WHERE window_start < ?")
+    .bind(utcHourWindow(new Date(nowMs - 24 * 3600 * 1000)))
+    .run();
+
   const hits = existing ? Number(existing.hit_count) : 0;
   if (hits >= RATE_LIMIT_MAX) {
     return json({ ok: false, error: "Too many requests. Please try again later." }, 429, cors);
