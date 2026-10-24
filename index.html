@@ -29,6 +29,7 @@
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="nav" aria-label="Primary">
+        <a href="https://groups.google.com/g/go-farva-beta">Closed test</a>
         <a href="#notify">Notify me</a>
         <a href="#features">Features</a>
         <a href="#screens">Screens</a>
@@ -46,6 +47,7 @@
           <p class="tagline">The offline run tracker. No account. £4.99 once.</p>
           <p class="lede">Track runs, follow routes and share clean cards, all on your phone.</p>
           <div class="cta-row">
+            <a class="btn btn-outline" href="https://groups.google.com/g/go-farva-beta">Join the closed test</a>
             <span class="btn btn-play" role="text" aria-label="Get it on Google Play — coming soon">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.8l11.4 6.6-3.1 3.1L3.6 2.8zm0 18.4l8.3-9.7 3.1 3.1L3.6 21.2zM14.2 10.2l3.5 2-3.5 2-1.6-2 1.6-2zm1.9-1.1L20.4 12l-4.3 2.5-3.6-2.5 3.6-3.4z"/></svg>
               Get it on Google Play
@@ -64,9 +66,17 @@
     </section>
 
 
-    <section id="notify" class="newsletter alt">
-      <div class="wrap">
-        <div class="newsletter-card">
+    <section class="access alt" aria-label="Closed test and launch updates">
+      <div class="wrap access-grid">
+        <article id="beta" class="beta-card">
+          <h2>Android closed test</h2>
+          <p class="section-sub">Go Farva is not on Google Play for everyone yet. Join the testers group for the closed Android beta.</p>
+          <div class="beta-actions">
+            <a class="btn btn-beta" href="https://groups.google.com/g/go-farva-beta">Join the testers group</a>
+            <p class="beta-url"><a href="https://groups.google.com/g/go-farva-beta">https://groups.google.com/g/go-farva-beta</a></p>
+          </div>
+        </article>
+        <div id="notify" class="newsletter-card">
           <h2>Get notified at launch</h2>
           <p class="section-sub">Leave your email and we’ll tell you when Go Farva is on Google Play. No spam, unsubscribe any time.</p>
           <form id="launch-notify" class="newsletter-form" action="/api/subscribe" method="post" novalidate>
@@ -215,6 +225,10 @@
         <h2 class="section-title">FAQ</h2>
         <p class="section-sub">Straight answers.</p>
         <div class="faq-grid">
+          <details class="faq-item">
+            <summary>How do I join the Android closed test?</summary>
+            <p>Go Farva is not on Google Play for everyone yet. Join the testers group for the closed Android beta: <a href="https://groups.google.com/g/go-farva-beta">https://groups.google.com/g/go-farva-beta</a>.</p>
+          </details>
           <details class="faq-item" open>
             <summary>Does it need a signal?</summary>
             <p>No. Tracking uses GPS only. Map tiles need a connection when you first view an area; routes you plan can be used offline once the routing data is on your phone.</p>
