@@ -86,7 +86,7 @@ a:hover { color: #085550; }
 .logo-mark { height: 36px; width: 36px; }
 .nav {
   display: flex;
-  gap: 1.5rem;
+  gap: 1.15rem;
   align-items: center;
 }
 .nav a {
@@ -164,6 +164,29 @@ a:hover { color: #085550; }
   box-shadow: var(--shadow);
 }
 .btn-play svg { width: 22px; height: 22px; fill: currentColor; }
+.btn-beta {
+  background: var(--primary);
+  color: var(--on-primary);
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-beta:hover {
+  background: #085550;
+  color: var(--on-primary);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  box-shadow: none;
+  cursor: pointer;
+  padding: calc(0.85rem - 2px) calc(1.35rem - 2px);
+}
+.btn-outline:hover {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+}
 .badge-soon {
   display: inline-flex;
   align-items: center;
@@ -434,27 +457,62 @@ section { padding: 3.5rem 0; }
 }
 .contact-card strong { color: var(--on-surface); }
 
-/* Newsletter signup */
-.newsletter {
-  padding: 2.5rem 0 3rem;
+/* Closed test + launch newsletter */
+.access {
+  padding: 0.5rem 0 3.25rem;
 }
+.access-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+#beta,
+#notify {
+  scroll-margin-top: 5.5rem;
+}
+.beta-card,
 .newsletter-card {
   background: var(--surface-lowest);
   border: 1px solid rgba(11, 107, 102, 0.1);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow);
   padding: 1.75rem 1.5rem;
-  max-width: 560px;
 }
+.beta-card {
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid var(--primary);
+}
+.beta-card h2,
 .newsletter-card h2 {
   margin: 0 0 0.35rem;
   font-size: clamp(1.4rem, 2.6vw, 1.75rem);
   letter-spacing: -0.02em;
   color: var(--primary);
 }
+.beta-card .section-sub,
 .newsletter-card .section-sub {
   margin-bottom: 1.25rem;
 }
+.beta-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-top: auto;
+}
+.beta-url {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.beta-url a {
+  font-weight: 600;
+}
+
+/* Newsletter signup */
 .newsletter-form {
   display: grid;
   gap: 0.9rem;
@@ -545,7 +603,8 @@ section { padding: 3.5rem 0; }
   .features { grid-template-columns: repeat(2, 1fr); }
   .hero-grid,
   .screens-grid,
-  .share-block { grid-template-columns: 1fr; }
+  .share-block,
+  .access-grid { grid-template-columns: 1fr; }
   .hero-visual { order: -1; min-height: 360px; }
   .faq-grid { grid-template-columns: 1fr; }
 }
